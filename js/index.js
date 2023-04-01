@@ -31,12 +31,12 @@ class Vehicle {
         }
     }
     return() {
-        if (!this._rented) {
-            console.log("The vehicle is  alvaiable for rent and is rented to you");
-        }
-        else {
+        if (this._rented) {
             this._rented = false;
             console.log("The Value is changed to False  ");
+        }
+        else {
+            console.log("The vehicle is  alvaiable for rent and is rented to you");
         }
     }
 }
@@ -70,10 +70,10 @@ class Bike extends Vehicle {
 let car = new Car("toyota", "434", 333, false, 5);
 console.log(car.rent());
 console.log(car.return());
-let truck = new Truck("toyota", "434", 333, true, 500);
+let truck = new Truck("toyota", "434", 333, false, 500);
 console.log(truck.rent());
 console.log(truck.return());
-let bike = new Car("toyota", "434", 333, false, 70);
+let bike = new Car("toyota", "434", 333, true, 70);
 console.log(bike.rent());
 console.log(bike.return());
 //# sourceMappingURL=index.js.map
